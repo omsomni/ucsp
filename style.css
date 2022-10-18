@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(63, 94, 251);
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(70, 208, 252, 1) 100%);
+    overflow: hidden;
+}
+
+.circle {
+    height: 10rem;
+    width: 10rem;
+    background-color: #555;
+    border-radius: 50%;
+    z-index: 100;
+}
+
+.container {
+    display: flex;
+    height: 92vh;
+    width: 46vw;
+    margin-left: 26rem;
+    margin-top: 2rem;
+    background-color: rgba(45, 36, 121, 0.315);
+    border-radius: 10rem;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+#left {
+    margin-left: 2vh;
+}
+#community {
+    margin-top: 2rem;
+    margin-left: 1rem;
+}
+#family {
+    margin-top: 12rem;
+    margin-left: 1px;
+}
+
+
+#mid { 
+    margin-left: 3rem;
+}
+#name {
+    margin-top: 11rem;
+}
+#church {
+    margin-top: 7rem;
+}
+
+
+#right {
+    margin-left: 3rem;
+}
+#school {
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+#group {
+    margin-left: 2rem;
+    margin-top: 12rem;
+}
+
+/* BEGIN ANIMATION STYLES */
+
+.full-screen {
+    position: fixed;
+    animation: go-full-screen forwards 500ms ease-out;
+    inset: var(--inset);
+}
+
+.shrink-down {
+    animation: go-full-screen reverse backwards 650ms ease-in-out !important;
+}
+
+
+@keyframes go-full-screen {
+    from {
+        inset: var(--inset);
+    }
+
+    to {
+        height: 59vh;
+        width: 50vw;
+        inset: 0;
+    }
+}
+
+/* mobile */
+@media only screen and (max-width: 760px) {
+    .container {
+        height: 92vh;
+        width: 95vw;
+        margin-top: 27px;
+        margin-left: 13px;
+        border-radius: 7rem;
+    }
+
+    .circle {
+        height: 8rem;
+        width: 8rem;
+        margin: 1rem;
+    }
+
+    #mid {
+        margin-left: 1rem;
+    }
+    #church {
+        margin-top: 9rem;
+    }
+    
+    #right {
+        margin-left: 1px;
+    }
+}
+
+/* desktop */
+@media only screen and (min-width: 761px) {
+    #community {
+            margin-top: 2rem;
+            margin-left: 2rem;
+        }
+
+        #family {
+            margin-top: 12rem;
+            margin-left: 2rem;
+        }
+}
+
+@media only screen and (min-width: 973px) {
+}
+
+@media only screen and (min-width: 1080px) {
+}
+
+@media only screen and (min-width: 1200px) {
+}
+
+@media only screen and (min-width: 1300px) {
+}
+
+@media only screen and (min-width: 1400px) {
+    .container {
+    }
+}
